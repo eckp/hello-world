@@ -3,4 +3,5 @@ Just another repository
 
 branch test
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+text
+![logo](https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png)
