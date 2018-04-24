@@ -3,5 +3,4 @@ Just another repository
 
 branch test
 
-http://github.com - automatic!
-[GitHub](http://github.com)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
