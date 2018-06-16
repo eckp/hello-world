@@ -1,5 +1,7 @@
-var table = document.querySelector("#table");                      
-table.addEventListener("click", doSomething, false);               
+function init() {
+  var table = document.querySelector("#table");
+  table.addEventListener("click", displayClickedColor, false);
+}
                                                                    
 function invertColor(hex) {                                        
   if (hex.indexOf('#') === 0) {                                    
@@ -20,10 +22,10 @@ function invertColor(hex) {
   if (r * 0.299 + g * 0.587 + b * 0.114 < 186) {                   
     newC = '#FFFFFF';                                              
   }                                                                
-    return newC;                                                   
+  return newC;                                                   
 }                                                                  
                                                                    
-function doSomething(e) {                                          
+function displayClickedColor(e) {                                          
   if (e.target !== e.currentTarget) {                              
     var clickedItem = e.target.id;                                 
     var hexIndex = clickedItem.indexOf("#");                       
@@ -34,3 +36,9 @@ function doSomething(e) {
   }                                                                
   e.stopPropagation();                                             
 }
+
+document.addEventListener('readystatechange', function() {
+  if (document.readyState === "complete") {
+    init();
+  }
+});
